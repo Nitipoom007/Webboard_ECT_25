@@ -13,10 +13,10 @@
             $login = $_POST['login'];
             $pwd = $_POST['pwd'];
             if($login == "Admin" && $pwd == "ad1234") {
-                echo "ยินดีต้อนรับคุณ $login <br>";
+                echo "ยินดีต้อนรับคุณ ADMIN <br>";
             }
             elseif($login == "member" && $pwd == "mem1234"){
-                echo "ยินดีต้อนรับคุณ $login <br>";
+                echo "ยินดีต้อนรับคุณ MEMBER <br>";
             }
             else{
                 echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง <br>";
