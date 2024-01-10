@@ -9,16 +9,22 @@
     <h1 style="text-align: center;">Webboard kakkak</h1>
     <hr>
     <div style="text-align: center;">
-        เข้าสู่ระบบด้วย <br>
-        Login = <?php echo $_POST['login']; ?> <br> 
-        Password = <?php echo $_POST['pwd']; ?> <br>
-    </div>
-    <br>
-    <div style="text-align: center;">
         <?php
-            echo "เข้าสู่ระบบด้วย <br>";
-            echo "Login = $_POST[login]<br>";
-            echo "Password = $_POST[pwd]<br>" 
+            $login = $_POST['login'];
+            $pwd = $_POST['pwd'];
+            if($login == "Admin" && $pwd == "ad1234") {
+                echo "ยินดีต้อนรับคุณ $login <br>";
+            }
+            elseif($login == "member" && $pwd == "mem1234"){
+                echo "ยินดีต้อนรับคุณ $login <br>";
+            }
+            else{
+                echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง <br>";
+            }
+            echo "<a href=index.php>กลับไปยังหน้าหลัก</a>"; 
+            //echo "เข้าสู่ระบบด้วย <br>";
+            //echo "Login = $_POST[login]<br>";
+            //echo "Password = $_POST[pwd]<br>"
         ?>
     </div>
 </body>
