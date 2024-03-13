@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2024 at 02:10 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Mar 13, 2024 at 10:44 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -62,7 +62,8 @@ CREATE TABLE `comment` (
 INSERT INTO `comment` (`id`, `content`, `post_date`, `user_id`, `post_id`) VALUES
 (1, 'เม้นแรกคับ', '2024-03-06 20:03:02', 6, 2),
 (2, 'เห็นด้วยคับมวยไทยชนะใสๆ เขมรอ่อนแอมากๆ ', '2024-03-06 20:07:16', 7, 2),
-(3, 'F แน่นอนคับ', '2024-03-06 20:07:32', 7, 1);
+(4, 'เห็นด้วยคับ คนนี้สุดยอดจริง', '2024-03-13 15:37:46', 6, 3),
+(5, 'คนนี้ระดับตำนาน แค่ได้ยินชื่อก็สั่นแล้วคับ +1', '2024-03-13 15:38:19', 9, 3);
 
 -- --------------------------------------------------------
 
@@ -84,8 +85,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `title`, `content`, `post_date`, `cat_id`, `user_id`) VALUES
-(1, 'จะ F มั้ยครับ', 'ผมเอาแต่ลอกงานเพื่อน ผมจะ F มั้ยครับ', '2024-02-28 16:58:07', 2, 6),
-(2, 'มวยไทย VS กุมขแมร์', 'มวยไทยชนะใสๆ', '2024-02-28 17:02:55', 3, 6);
+(2, 'มวยไทย VS กุมขแมร์', 'มวยไทยชนะใสๆ', '2024-02-28 17:02:55', 3, 6),
+(3, 'กีฬาในร่ม ก้มแล้วแทง', 'ธนพล ครองแชมป์ 10 สมัย', '2024-03-13 15:37:16', 3, 6);
 
 -- --------------------------------------------------------
 
@@ -108,8 +109,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `name`, `gender`, `email`, `role`) VALUES
-(6, 'admin', '8dc9fa69ec51046b4472bb512e292d959edd2aef', 'adminza', 'm', 'adminstator@gmail.com', 'm'),
-(7, 'Prasitthichoke', 'c9deba1e15cbdddeaa9b714a59af5ce192717ff0', 'ประสิทธิโชค', 'm', 'Prasit123@gmail.com', 'm');
+(6, 'admin', '8dc9fa69ec51046b4472bb512e292d959edd2aef', 'adminza', 'm', 'adminstator@gmail.com', 'a'),
+(7, 'Prasitthichoke', 'c9deba1e15cbdddeaa9b714a59af5ce192717ff0', 'ประสิทธิโชค', 'm', 'Prasit123@gmail.com', 'm'),
+(8, '', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', 'm'),
+(9, 'Nitipoom', '2890f2764f9ba29c3a0eac5cd92298fb5706684b', 'นิติภูมิ', 'm', 'nitipoom@gmail.com', 'm');
 
 --
 -- Indexes for dumped tables
@@ -153,19 +156,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
