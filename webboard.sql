@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2024 at 10:44 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Mar 24, 2024 at 10:29 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,8 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'เรื่องทั่วไป'),
 (2, 'เรื่องเรียน'),
-(3, 'เรื่องกีฬา');
+(3, 'เรื่องกีฬา'),
+(18, 'ป้าข้างบ้าน');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,9 @@ CREATE TABLE `post` (
 
 INSERT INTO `post` (`id`, `title`, `content`, `post_date`, `cat_id`, `user_id`) VALUES
 (2, 'มวยไทย VS กุมขแมร์', 'มวยไทยชนะใสๆ', '2024-02-28 17:02:55', 3, 6),
-(3, 'กีฬาในร่ม ก้มแล้วแทง', 'ธนพล ครองแชมป์ 10 สมัย', '2024-03-13 15:37:16', 3, 6);
+(3, 'กีฬาในร่ม ก้มแล้วแทง', 'ธนพล ครองแชมป์ 12 สมัย', '2024-03-13 15:37:16', 3, 6),
+(4, 'โดน DCK เก็บยก sec', 'ติด F กระจาย', '2024-03-22 11:31:14', 2, 9),
+(5, 'ชีวิตที่เฮงซวย', 'ฟหกไๆกมๆท', '2024-03-22 11:31:55', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -150,7 +153,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -162,7 +165,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
